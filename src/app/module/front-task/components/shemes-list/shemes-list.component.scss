@@ -1,0 +1,11 @@
+table {
+  width: 100%;
+}
+
+mat-cell.mat-collum-buttons {
+  flex-direction: column;
+}
+.mat-cell:first-child,
+.mat-header-cell:first-child {
+  flex: 4;
+}

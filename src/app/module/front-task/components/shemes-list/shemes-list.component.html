@@ -1,0 +1,72 @@
+<div class="mat-elevation-z8">
+  <mat-table [dataSource]="schemesList" matSort class="mat-elevation-z8">
+    <!-- Position Column
+    <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.id }} </mat-cell>
+    </ng-container> -->
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell mat-sort-header *matHeaderCellDef>
+        Name
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
+    </ng-container>
+
+    <!-- Decription-->
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.description }} </mat-cell>
+    </ng-container>
+
+    <!-- Trigger Name Column -->
+    <ng-container matColumnDef="triger">
+      <mat-header-cell mat-sort-header *matHeaderCellDef>
+        Trigger Name
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.triger }} </mat-cell>
+    </ng-container>
+
+    <!-- Interim Trigger Name Column -->
+    <ng-container matColumnDef="interimtrigger">
+      <mat-header-cell *matHeaderCellDef>
+        Interim Trigger Name
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        {{ element.interimtrigger }}
+      </mat-cell>
+    </ng-container>
+
+    <!-- Efective deadline info Column -->
+    <ng-container matColumnDef="lbmanEffectivedeadlineinfo">
+      <mat-header-cell *matHeaderCellDef>
+        Efective deadline info
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        {{ element.lbmanEffectivedeadlineinfo }}
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="buttons">
+      <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+      <mat-cell *matCellDef="let element" class="icons">
+        <div>
+          <button mat-icon-button><mat-icon>visibility</mat-icon></button>
+
+          <button mat-icon-button>
+            <mat-icon>system_update_alt</mat-icon>
+          </button>
+        </div>
+        <div>
+          <button mat-icon-button><mat-icon>edit</mat-icon></button>
+
+          <button mat-icon-button><mat-icon>delete</mat-icon></button>
+        </div>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+</div>

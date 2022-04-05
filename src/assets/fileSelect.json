@@ -1,0 +1,46 @@
+[
+    {
+        "value": "1",
+        "viewValue": "Pesonal Data transfer to other processing entity"
+    },
+    {
+        "value": "2",
+        "viewValue": "Pesonal Data transfer to other processing entity"
+    },
+    {
+        "value": "3",
+        "viewValue": "Data Collacetion/Aqusition Instant"
+    },
+    {
+        "value": "4",
+        "viewValue": "Planned Change or new personal data processing purpose"
+    },
+    {
+        "value": "5",
+        "viewValue": "Change(d) on new personal data processing pupose"
+    },
+    {
+        "value": "6",
+        "viewValue": "Pupose/Service start/commencement data -legal/contact start"
+    },
+    {
+        "value": "7",
+        "viewValue": "Planed Personal Data transfer to other processing entity"
+    },
+    {
+        "value": "8",
+        "viewValue": "Pesonal Data transfer to other processing entity"
+    },
+    {
+        "value": "9",
+        "viewValue": "Data Collacetion/Aqusition Instant"
+    },
+    {
+        "value": "10",
+        "viewValue": "Planned Change or new personal data processing purpose"
+    },
+    {
+        "value": "11",
+        "viewValue": "Change(d) on new personal data processing pupose"
+    }
+]

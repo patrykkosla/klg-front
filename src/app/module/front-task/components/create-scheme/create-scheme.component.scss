@@ -1,0 +1,28 @@
+
+div.mat-dialog-content{
+    width: 660px;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.mat-card {
+    margin: 20px 0px;
+}
+
+.klg-radio-group {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+    align-items: flex-start;
+  }
+
+button, 
+.klg-radio-group mat-checkbox,
+.mat-radio-label,
+mat-radio-button {
+    margin-right: 20px;
+}
+
+button mat-icon { margin-right: 5px;}

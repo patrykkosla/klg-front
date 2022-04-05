@@ -1,0 +1,120 @@
+<h3 mat-dialog-title>Trigger and Constrain Schemes - New</h3>
+<form [formGroup]="triggerSchemesForm">
+  <div mat-dialog-content>
+    <mat-form-field appearance="outline">
+      <input matInput placeholder="Name *" formControlName="basicName" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Trigger Name" formControlName="category">
+        <mat-option *ngFor="let trName of trrigerName" [value]="trName.name">
+          {{ trName.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-card>
+      <label for="klg-radio-group-label">Triger Date Known</label>
+      <mat-radio-group
+        formControlName="dataknow"
+        aria-labelledby="klg-radio-group-label"
+        class="klg-radio-group"
+      >
+        <mat-radio-button
+          class="klg-radio-button"
+          *ngFor="let trriger of triggerDataKnowList"
+          [value]="trriger"
+          >{{ trriger }}
+        </mat-radio-button>
+      </mat-radio-group>
+    </mat-card>
+
+    <mat-card>
+      <mat-checkbox
+        formControlName="isservicetrigger"
+        (change)="onIsServieTriggerCHange($event)"
+      >
+        Is Service Trigger?</mat-checkbox
+      >
+      <mat-form-field>
+        <mat-select
+          placeholder="Interim trigger Name"
+          formControlName="servicetrigger"
+        >
+          <mat-option
+            *ngFor="let servieTrigg of serviceTriggerOpions"
+            [value]="servieTrigg"
+          >
+            {{ servieTrigg }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+    </mat-card>
+
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Constrain name"
+        formControlName="constrainName"
+      />
+    </mat-form-field>
+
+    <mat-card>
+      <label for="klg-radio-group-label">Constrain Value Known</label>
+      <mat-radio-group
+        aria-labelledby="klg-radio-group-label"
+        class="klg-radio-group"
+        formControlName="customValueKnow"
+      >
+        <mat-radio-button
+          class="klg-radio-button"
+          *ngFor="let trriger of triggerDataKnowList"
+          [value]="trriger"
+          >{{ trriger }}
+        </mat-radio-button>
+      </mat-radio-group>
+    </mat-card>
+
+    <mat-form-field>
+      <mat-label>Effective Deadline info</mat-label>
+      <mat-select formControlName="deadlinInfo" name="opt">
+        <mat-option *ngFor="let opt of selectOpionsLis" [value]="opt.value">
+          {{ opt.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Related Processing Basis Reference Type</mat-label>
+      <mat-select formControlName="selectedProcesinReference" name="opt">
+        <mat-option *ngFor="let opt of selectOpionsLis" [value]="opt.value">
+          {{ opt.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-card formArrayName="chekboxTestName" class="klg-radio-group">
+      <mat-checkbox
+        *ngFor="let radio of radioArray"
+        (change)="onChangeEventFunc(radio.name, $event)"
+      >
+        {{ radio.name | uppercase }}
+      </mat-checkbox>
+    </mat-card>
+
+    <mat-form-field appearance="outline" placeholder="Description">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+  </div>
+</form>
+
+<mat-dialog-actions>
+  <button mat-raised-button color="basic" (click)="closeForm()">
+    <mat-icon>close</mat-icon>Close
+  </button>
+
+  <button mat-raised-button color="primary" (click)="saveForm()">
+    <mat-icon>save</mat-icon>Save
+  </button>
+</mat-dialog-actions>
